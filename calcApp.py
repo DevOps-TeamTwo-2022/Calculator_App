@@ -6,9 +6,9 @@ def askInput():
   print("Calculatable features\n===============================")
   print("1) Addition")
   print("2) Subtraction")
-  print("3) Division")
-  print("4) Multiplication")
-  print("5) Exponents, Power of")
+  print("3) Multiplication")
+  print("4) Division")
+  print("5) Exponent, Power of, x^n, x**n")
   print("\n0) Exit\n")    
     
   userInput = input("Enter Selection: ")
@@ -49,7 +49,7 @@ def checkUserInput(userInput):
 def inputNumber():
   theInput = input("Enter number: ")
     
-  theInput = int(theInput)
+  theInput = float(theInput)
     
   return theInput
 
@@ -67,7 +67,70 @@ def addition():
   print("Result\n===============================\n")
 
   print(firstNumber, "+", secondNumber, "=", firstNumber + secondNumber,"\n")
-    
+
+def subtraction():
+  print("Subtraction\n===============================\n")
+
+  firstNumber = inputNumber()
+
+  print("\n",firstNumber, "-","\n")
+  
+  secondNumber = inputNumber()
+
+  clearScreen()
+
+  print("Result\n===============================\n")
+
+  print(firstNumber, "-", secondNumber, "=", firstNumber - secondNumber,"\n")
+
+def multiplication():
+  print("Multiplication\n===============================\n")
+
+  firstNumber = inputNumber()
+
+  print("\n",firstNumber, "*","\n")
+  
+  secondNumber = inputNumber()
+
+  clearScreen()
+
+  print("Result\n===============================\n")
+
+  print(firstNumber, "*", secondNumber, "=", firstNumber * secondNumber,"\n")  
+
+def division():
+  print("Division\n===============================\n")
+
+  firstNumber = inputNumber()
+
+  print("\n",firstNumber, "/","\n")
+  
+  secondNumber = inputNumber()
+
+  clearScreen()
+
+  print("Result\n===============================\n")
+
+  try:
+  	print(firstNumber, "/", secondNumber, "=", firstNumber / secondNumber,"\n")
+  except:
+  	print("Division by zero not possible!\n")
+
+def exponents():
+  print("Exponents\n===============================\n")
+
+  firstNumber = inputNumber()
+
+  print("\n",firstNumber, "^","\n")
+  
+  secondNumber = inputNumber()
+
+  clearScreen()
+
+  print("Result\n===============================\n")
+
+  print(firstNumber, "^", secondNumber, "=", firstNumber ** secondNumber,"\n")      
+
 def clearScreen():
     os.system('cls' if os.name=='nt' else 'clear')    
 
