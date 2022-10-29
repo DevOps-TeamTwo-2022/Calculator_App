@@ -47,12 +47,18 @@ def checkUserInput(userInput):
     askInput()
         
 def inputNumber():
-  theInput = input("Enter number: ")
-    
-  theInput = float(theInput)
-    
+  
+  while True:
+    try:
+      theInput = input("Enter number: ")
+      theInput = float(theInput)
+    except:
+      print("\nInvalid number! Try Again!\n")
+    else:  
+      break
+      
   return theInput
-
+  
 def addition():
   print("Addition\n===============================\n")
 
